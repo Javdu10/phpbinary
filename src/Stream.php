@@ -539,6 +539,28 @@ class Stream implements StreamInterface, ReaderInterface, WriterInterface
 
         fwrite($this->handle, $bytes);
     }
+    
+    /**
+     * {@inheritdoc}
+     *
+     * @param float $value The value to write.
+     */
+    public function writeInt64($value)
+    {
+        $bytes = pack('q', $value);
+
+        fwrite($this->handle, $bytes);
+    }
+    
+    /**
+     * {@inheritdoc}
+     *
+     * @param float $value The value to write.
+     */
+    public function write($bytes)
+    {
+        fwrite($this->handle, $bytes);
+    }
 
     /**
      * {@inheritdoc}
