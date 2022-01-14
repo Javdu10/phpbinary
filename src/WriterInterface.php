@@ -41,6 +41,20 @@ interface WriterInterface
      * @param float $value The value to write.
      */
     public function writeFloat64($value);
+    
+    /**
+     * Writes a 64-bits integer in machine byte order.
+     *
+     * @param float $value The value to write.
+     */
+    public function writeInt64($value);
+    
+    /**
+     * Writes bytes in machine byte order.
+     *
+     * @param float $value The value to write.
+     */
+    public function write($bytes);
 
     /**
      * Writes a 64-bits floating point number in big endian byte order.
