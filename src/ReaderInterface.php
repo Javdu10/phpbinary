@@ -15,6 +15,14 @@ namespace PhpBinary;
 interface ReaderInterface
 {
     /**
+     * Read $bytes from the stream
+     *
+     * @param int $bytes
+     * @return string
+     */
+    public function read($bytes);
+
+    /**
      * Reads a 32-bits floating point number in machine byte order.
      *
      * @return float
