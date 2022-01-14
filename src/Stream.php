@@ -90,7 +90,7 @@ class Stream implements StreamInterface, ReaderInterface, WriterInterface
      * @param int $bytes
      * @return string
      */
-    protected function read($bytes)
+    public function read($bytes)
     {
         if ($bytes < 1) {
             return '';
